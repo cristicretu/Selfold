@@ -6,20 +6,23 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct TaskItemView: View {
     var name: String = ""
     var date: String = ""
     
     var body: some View {
-        HStack {
-            VStack(alignment: .leading) {
-                Text(name)
-                    .font(.headline)
-                Text(date)
-                    .font(.caption)
-            }
+        VStack(alignment: .center, spacing: 8.0) {
+            Circle()
+                .frame(width: 44.0, height: 44.0)
+            Text("\(name)")
+                .font(.title)
+                .fontWeight(.bold)
+            Text("\(date)")
         }
+        .background(Color.blue)
+        .cornerRadius(20.0)
     }
 }
 
