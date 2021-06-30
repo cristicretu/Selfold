@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,8 @@
 		1656A95126877CF50013CD59 /* alpha_unselfold.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1656A94F26877CF50013CD59 /* alpha_unselfold.xcdatamodeld */; };
 		16579AC526877F5C005D4432 /* TaskItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16579AC426877F5C005D4432 /* TaskItem.swift */; };
 		16BFD1532687856300854C15 /* TaskItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BFD1522687856300854C15 /* TaskItemView.swift */; };
+		16F8B3E8268C9047004C431B /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = 16F8B3E7268C9047004C431B /* SwiftUIX */; };
+		16F98921268C9421002861CE /* Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F98920268C9421002861CE /* Blur.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,7 @@
 		1656A95226877CF50013CD59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		16579AC426877F5C005D4432 /* TaskItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskItem.swift; sourceTree = "<group>"; };
 		16BFD1522687856300854C15 /* TaskItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskItemView.swift; sourceTree = "<group>"; };
+		16F98920268C9421002861CE /* Blur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blur.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16F8B3E8268C9047004C431B /* SwiftUIX in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				16BFD1522687856300854C15 /* TaskItemView.swift */,
+				16F98920268C9421002861CE /* Blur.swift */,
 				1656A94426877CF50013CD59 /* alpha_unselfoldApp.swift */,
 				1656A94626877CF50013CD59 /* ContentView.swift */,
 				1656A94826877CF50013CD59 /* Assets.xcassets */,
@@ -97,6 +102,9 @@
 			dependencies = (
 			);
 			name = alpha_unselfold;
+			packageProductDependencies = (
+				16F8B3E7268C9047004C431B /* SwiftUIX */,
+			);
 			productName = alpha_unselfold;
 			productReference = 1656A94126877CF50013CD59 /* alpha_unselfold.app */;
 			productType = "com.apple.product-type.application";
@@ -124,6 +132,9 @@
 				Base,
 			);
 			mainGroup = 1656A93826877CF50013CD59;
+			packageReferences = (
+				16F8B3E6268C9047004C431B /* XCRemoteSwiftPackageReference "SwiftUIX" */,
+			);
 			productRefGroup = 1656A94226877CF50013CD59 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -154,6 +165,7 @@
 				1656A94E26877CF50013CD59 /* Persistence.swift in Sources */,
 				16579AC526877F5C005D4432 /* TaskItem.swift in Sources */,
 				1656A95126877CF50013CD59 /* alpha_unselfold.xcdatamodeld in Sources */,
+				16F98921268C9421002861CE /* Blur.swift in Sources */,
 				1656A94726877CF50013CD59 /* ContentView.swift in Sources */,
 				1656A94526877CF50013CD59 /* alpha_unselfoldApp.swift in Sources */,
 			);
@@ -342,6 +354,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		16F8B3E6268C9047004C431B /* XCRemoteSwiftPackageReference "SwiftUIX" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftUIX/SwiftUIX.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		16F8B3E7268C9047004C431B /* SwiftUIX */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 16F8B3E6268C9047004C431B /* XCRemoteSwiftPackageReference "SwiftUIX" */;
+			productName = SwiftUIX;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		1656A94F26877CF50013CD59 /* alpha_unselfold.xcdatamodeld */ = {

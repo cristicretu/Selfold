@@ -7,22 +7,22 @@
 
 import SwiftUI
 import CoreData
+import SwiftUIX
 
 struct TaskItemView: View {
     var name: String = ""
     var date: String = ""
     
     var body: some View {
-        VStack(alignment: .center, spacing: 8.0) {
-            Circle()
-                .frame(width: 44.0, height: 44.0)
+        VisualEffectBlurView(blurStyle: .systemUltraThinMaterial, vibrancyStyle: .fill, content: {
             Text("\(name)")
-                .font(.title)
-                .fontWeight(.bold)
             Text("\(date)")
-        }
-        .background(Color.blue)
-        .cornerRadius(20.0)
+//          Text("\()")
+        })
+        .frame(width: 150, height: 150)
+        .mask(RoundedRectangle(cornerRadius: 25, style: .continuous))
+        .overlay(RoundedRectangle(cornerRadius: 25, style: .continuous).stroke(lineWidth: 0.5).fill(Color.white))
+        
     }
 }
 
