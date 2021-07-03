@@ -1,0 +1,632 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		16EB8F7A269074EF0089C9B1 /* SelfoldApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EB8F79269074EF0089C9B1 /* SelfoldApp.swift */; };
+		16EB8F7C269074EF0089C9B1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EB8F7B269074EF0089C9B1 /* ContentView.swift */; };
+		16EB8F7E269074F10089C9B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16EB8F7D269074F10089C9B1 /* Assets.xcassets */; };
+		16EB8F81269074F10089C9B1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16EB8F80269074F10089C9B1 /* Preview Assets.xcassets */; };
+		16EB8F83269074F10089C9B1 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EB8F82269074F10089C9B1 /* Persistence.swift */; };
+		16EB8F91269074F10089C9B1 /* SelfoldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EB8F90269074F10089C9B1 /* SelfoldTests.swift */; };
+		16EB8F9C269074F10089C9B1 /* SelfoldUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EB8F9B269074F10089C9B1 /* SelfoldUITests.swift */; };
+		16EB8FAB269075790089C9B1 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 16EB8FA9269075790089C9B1 /* Model.xcdatamodeld */; };
+		16EB8FAF269075F10089C9B1 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EB8FAE269075F10089C9B1 /* Home.swift */; };
+		16EB8FB2269076170089C9B1 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EB8FB1269076170089C9B1 /* HomeViewModel.swift */; };
+		16EB8FB4269076AF0089C9B1 /* NewDataGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EB8FB3269076AF0089C9B1 /* NewDataGroup.swift */; };
+		16EB8FB6269078BC0089C9B1 /* DateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EB8FB5269078BC0089C9B1 /* DateButton.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		16EB8F8D269074F10089C9B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 16EB8F6E269074EF0089C9B1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 16EB8F75269074EF0089C9B1;
+			remoteInfo = Selfold;
+		};
+		16EB8F98269074F10089C9B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 16EB8F6E269074EF0089C9B1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 16EB8F75269074EF0089C9B1;
+			remoteInfo = Selfold;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		16EB8F76269074EF0089C9B1 /* Selfold.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Selfold.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		16EB8F79269074EF0089C9B1 /* SelfoldApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfoldApp.swift; sourceTree = "<group>"; };
+		16EB8F7B269074EF0089C9B1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		16EB8F7D269074F10089C9B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		16EB8F80269074F10089C9B1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		16EB8F82269074F10089C9B1 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		16EB8F87269074F10089C9B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16EB8F8C269074F10089C9B1 /* SelfoldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SelfoldTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		16EB8F90269074F10089C9B1 /* SelfoldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfoldTests.swift; sourceTree = "<group>"; };
+		16EB8F92269074F10089C9B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16EB8F97269074F10089C9B1 /* SelfoldUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SelfoldUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		16EB8F9B269074F10089C9B1 /* SelfoldUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfoldUITests.swift; sourceTree = "<group>"; };
+		16EB8F9D269074F10089C9B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16EB8FAA269075790089C9B1 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		16EB8FAE269075F10089C9B1 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		16EB8FB1269076170089C9B1 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		16EB8FB3269076AF0089C9B1 /* NewDataGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDataGroup.swift; sourceTree = "<group>"; };
+		16EB8FB5269078BC0089C9B1 /* DateButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateButton.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		16EB8F73269074EF0089C9B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16EB8F89269074F10089C9B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16EB8F94269074F10089C9B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		16EB8F6D269074EF0089C9B1 = {
+			isa = PBXGroup;
+			children = (
+				16EB8F78269074EF0089C9B1 /* Selfold */,
+				16EB8F8F269074F10089C9B1 /* SelfoldTests */,
+				16EB8F9A269074F10089C9B1 /* SelfoldUITests */,
+				16EB8F77269074EF0089C9B1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		16EB8F77269074EF0089C9B1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				16EB8F76269074EF0089C9B1 /* Selfold.app */,
+				16EB8F8C269074F10089C9B1 /* SelfoldTests.xctest */,
+				16EB8F97269074F10089C9B1 /* SelfoldUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		16EB8F78269074EF0089C9B1 /* Selfold */ = {
+			isa = PBXGroup;
+			children = (
+				16EB8FAD269075E10089C9B1 /* ViewModel */,
+				16EB8FAC269075D70089C9B1 /* View */,
+				16EB8F79269074EF0089C9B1 /* SelfoldApp.swift */,
+				16EB8F7B269074EF0089C9B1 /* ContentView.swift */,
+				16EB8F7D269074F10089C9B1 /* Assets.xcassets */,
+				16EB8F82269074F10089C9B1 /* Persistence.swift */,
+				16EB8F87269074F10089C9B1 /* Info.plist */,
+				16EB8F7F269074F10089C9B1 /* Preview Content */,
+				16EB8FA9269075790089C9B1 /* Model.xcdatamodeld */,
+			);
+			path = Selfold;
+			sourceTree = "<group>";
+		};
+		16EB8F7F269074F10089C9B1 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				16EB8F80269074F10089C9B1 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		16EB8F8F269074F10089C9B1 /* SelfoldTests */ = {
+			isa = PBXGroup;
+			children = (
+				16EB8F90269074F10089C9B1 /* SelfoldTests.swift */,
+				16EB8F92269074F10089C9B1 /* Info.plist */,
+			);
+			path = SelfoldTests;
+			sourceTree = "<group>";
+		};
+		16EB8F9A269074F10089C9B1 /* SelfoldUITests */ = {
+			isa = PBXGroup;
+			children = (
+				16EB8F9B269074F10089C9B1 /* SelfoldUITests.swift */,
+				16EB8F9D269074F10089C9B1 /* Info.plist */,
+			);
+			path = SelfoldUITests;
+			sourceTree = "<group>";
+		};
+		16EB8FAC269075D70089C9B1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				16EB8FAE269075F10089C9B1 /* Home.swift */,
+				16EB8FB3269076AF0089C9B1 /* NewDataGroup.swift */,
+				16EB8FB5269078BC0089C9B1 /* DateButton.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		16EB8FAD269075E10089C9B1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				16EB8FB1269076170089C9B1 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		16EB8F75269074EF0089C9B1 /* Selfold */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16EB8FA0269074F10089C9B1 /* Build configuration list for PBXNativeTarget "Selfold" */;
+			buildPhases = (
+				16EB8F72269074EF0089C9B1 /* Sources */,
+				16EB8F73269074EF0089C9B1 /* Frameworks */,
+				16EB8F74269074EF0089C9B1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Selfold;
+			productName = Selfold;
+			productReference = 16EB8F76269074EF0089C9B1 /* Selfold.app */;
+			productType = "com.apple.product-type.application";
+		};
+		16EB8F8B269074F10089C9B1 /* SelfoldTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16EB8FA3269074F10089C9B1 /* Build configuration list for PBXNativeTarget "SelfoldTests" */;
+			buildPhases = (
+				16EB8F88269074F10089C9B1 /* Sources */,
+				16EB8F89269074F10089C9B1 /* Frameworks */,
+				16EB8F8A269074F10089C9B1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				16EB8F8E269074F10089C9B1 /* PBXTargetDependency */,
+			);
+			name = SelfoldTests;
+			productName = SelfoldTests;
+			productReference = 16EB8F8C269074F10089C9B1 /* SelfoldTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		16EB8F96269074F10089C9B1 /* SelfoldUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16EB8FA6269074F10089C9B1 /* Build configuration list for PBXNativeTarget "SelfoldUITests" */;
+			buildPhases = (
+				16EB8F93269074F10089C9B1 /* Sources */,
+				16EB8F94269074F10089C9B1 /* Frameworks */,
+				16EB8F95269074F10089C9B1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				16EB8F99269074F10089C9B1 /* PBXTargetDependency */,
+			);
+			name = SelfoldUITests;
+			productName = SelfoldUITests;
+			productReference = 16EB8F97269074F10089C9B1 /* SelfoldUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		16EB8F6E269074EF0089C9B1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					16EB8F75269074EF0089C9B1 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					16EB8F8B269074F10089C9B1 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 16EB8F75269074EF0089C9B1;
+					};
+					16EB8F96269074F10089C9B1 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 16EB8F75269074EF0089C9B1;
+					};
+				};
+			};
+			buildConfigurationList = 16EB8F71269074EF0089C9B1 /* Build configuration list for PBXProject "Selfold" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 16EB8F6D269074EF0089C9B1;
+			productRefGroup = 16EB8F77269074EF0089C9B1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				16EB8F75269074EF0089C9B1 /* Selfold */,
+				16EB8F8B269074F10089C9B1 /* SelfoldTests */,
+				16EB8F96269074F10089C9B1 /* SelfoldUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		16EB8F74269074EF0089C9B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16EB8F81269074F10089C9B1 /* Preview Assets.xcassets in Resources */,
+				16EB8F7E269074F10089C9B1 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16EB8F8A269074F10089C9B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16EB8F95269074F10089C9B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		16EB8F72269074EF0089C9B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16EB8F83269074F10089C9B1 /* Persistence.swift in Sources */,
+				16EB8FB2269076170089C9B1 /* HomeViewModel.swift in Sources */,
+				16EB8F7C269074EF0089C9B1 /* ContentView.swift in Sources */,
+				16EB8FB4269076AF0089C9B1 /* NewDataGroup.swift in Sources */,
+				16EB8FAF269075F10089C9B1 /* Home.swift in Sources */,
+				16EB8FB6269078BC0089C9B1 /* DateButton.swift in Sources */,
+				16EB8F7A269074EF0089C9B1 /* SelfoldApp.swift in Sources */,
+				16EB8FAB269075790089C9B1 /* Model.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16EB8F88269074F10089C9B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16EB8F91269074F10089C9B1 /* SelfoldTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16EB8F93269074F10089C9B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16EB8F9C269074F10089C9B1 /* SelfoldUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		16EB8F8E269074F10089C9B1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 16EB8F75269074EF0089C9B1 /* Selfold */;
+			targetProxy = 16EB8F8D269074F10089C9B1 /* PBXContainerItemProxy */;
+		};
+		16EB8F99269074F10089C9B1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 16EB8F75269074EF0089C9B1 /* Selfold */;
+			targetProxy = 16EB8F98269074F10089C9B1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		16EB8F9E269074F10089C9B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		16EB8F9F269074F10089C9B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		16EB8FA1269074F10089C9B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Selfold/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Selfold/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cristicretu.Selfold;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		16EB8FA2269074F10089C9B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Selfold/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Selfold/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cristicretu.Selfold;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		16EB8FA4269074F10089C9B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SelfoldTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cristicretu.SelfoldTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Selfold.app/Selfold";
+			};
+			name = Debug;
+		};
+		16EB8FA5269074F10089C9B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SelfoldTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cristicretu.SelfoldTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Selfold.app/Selfold";
+			};
+			name = Release;
+		};
+		16EB8FA7269074F10089C9B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SelfoldUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cristicretu.SelfoldUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Selfold;
+			};
+			name = Debug;
+		};
+		16EB8FA8269074F10089C9B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SelfoldUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cristicretu.SelfoldUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Selfold;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		16EB8F71269074EF0089C9B1 /* Build configuration list for PBXProject "Selfold" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16EB8F9E269074F10089C9B1 /* Debug */,
+				16EB8F9F269074F10089C9B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		16EB8FA0269074F10089C9B1 /* Build configuration list for PBXNativeTarget "Selfold" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16EB8FA1269074F10089C9B1 /* Debug */,
+				16EB8FA2269074F10089C9B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		16EB8FA3269074F10089C9B1 /* Build configuration list for PBXNativeTarget "SelfoldTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16EB8FA4269074F10089C9B1 /* Debug */,
+				16EB8FA5269074F10089C9B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		16EB8FA6269074F10089C9B1 /* Build configuration list for PBXNativeTarget "SelfoldUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16EB8FA7269074F10089C9B1 /* Debug */,
+				16EB8FA8269074F10089C9B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		16EB8FA9269075790089C9B1 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				16EB8FAA269075790089C9B1 /* Model.xcdatamodel */,
+			);
+			currentVersion = 16EB8FAA269075790089C9B1 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 16EB8F6E269074EF0089C9B1 /* Project object */;
+}
