@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CoreData
 
 class HomeViewModel: ObservableObject {
     @Published var content = ""
@@ -15,7 +16,18 @@ class HomeViewModel: ObservableObject {
     @Published var isNewData = false
     
     let calendar = Calendar.current
-//    func checkDate() -> String {
-//        
-//    }
+
+    func writeData (context : NSManagedObjectContext) {
+        let newTask = Task(context: context)
+        newTask.date = date
+        newTask.content = content
+        
+        do {
+            try context.save()
+            isNewData.toggle()
+        }
+        catch {
+            print(error.localizedDescription)
+        }
+    }
 }
