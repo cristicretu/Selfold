@@ -32,12 +32,20 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            Button(action: {showingSheet.toggle()}, label: {
-                /*@START_MENU_TOKEN@*/Text("Button")/*@END_MENU_TOKEN@*/
-            })
-            .sheet(isPresented: $showingSheet, content: {
-                messi
-            })
+            VStack {
+                HStack {
+                    ForEach(TaskItems) { item in
+                        TaskCard(content: item.content!, date: item.date!)
+                    }
+                }
+                
+                Button(action: {showingSheet.toggle()}, label: {
+                    /*@START_MENU_TOKEN@*/Text("Button")/*@END_MENU_TOKEN@*/
+                })
+                .sheet(isPresented: $showingSheet, content: {
+                    messi
+                })
+            }
         }
         .navigationTitle("Home")
     }

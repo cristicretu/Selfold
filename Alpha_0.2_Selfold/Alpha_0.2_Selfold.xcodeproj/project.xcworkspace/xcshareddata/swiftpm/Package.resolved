@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "SwiftUIX",
+        "repositoryURL": "https://github.com/SwiftUIX/SwiftUIX.git",
+        "state": {
+          "branch": "master",
+          "revision": "950e87c13327e68ee36850e586a90eb00dbdd628",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
