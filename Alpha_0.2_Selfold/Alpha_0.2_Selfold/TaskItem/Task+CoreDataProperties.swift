@@ -18,15 +18,8 @@ extension Task {
 
     @NSManaged public var content: String?
     @NSManaged public var date: Date?
-    @NSManaged public var points: Int64
+//    @NSManaged public var points: String?
 
 }
 
-extension Task : Identifiable {
-    static func getAllTaskItems() -> NSFetchRequest<Task> {
-        let request : NSFetchRequest<Task> = Task.fetchRequest() as! NSFetchRequest<Task>
-        let sortDescriptor = NSSortDescriptor(key: "date", ascending: true)
-        request.sortDescriptors = [sortDescriptor]
-        return request
-    }
-}
+

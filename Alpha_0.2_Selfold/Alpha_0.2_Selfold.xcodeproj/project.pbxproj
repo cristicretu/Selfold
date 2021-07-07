@@ -15,8 +15,9 @@
 		163F993726932C17009080D6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 163F993626932C17009080D6 /* Preview Assets.xcassets */; };
 		163F993926932C17009080D6 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163F993826932C17009080D6 /* Persistence.swift */; };
 		163F993C26932C17009080D6 /* Alpha_0_2_Selfold.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 163F993A26932C17009080D6 /* Alpha_0_2_Selfold.xcdatamodeld */; };
-		163F994526932CD1009080D6 /* Task+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163F994326932CD1009080D6 /* Task+CoreDataClass.swift */; };
-		163F994626932CD1009080D6 /* Task+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163F994426932CD1009080D6 /* Task+CoreDataProperties.swift */; };
+		1668116A26957221003C685C /* newTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1668116926957221003C685C /* newTaskView.swift */; };
+		1668116D269578B6003C685C /* Task+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1668116B269578B6003C685C /* Task+CoreDataClass.swift */; };
+		1668116E269578B6003C685C /* Task+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1668116C269578B6003C685C /* Task+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,8 +30,9 @@
 		163F993826932C17009080D6 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		163F993B26932C17009080D6 /* Alpha_0_2_Selfold.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Alpha_0_2_Selfold.xcdatamodel; sourceTree = "<group>"; };
 		163F993D26932C17009080D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		163F994326932CD1009080D6 /* Task+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataClass.swift"; sourceTree = "<group>"; };
-		163F994426932CD1009080D6 /* Task+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		1668116926957221003C685C /* newTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newTaskView.swift; sourceTree = "<group>"; };
+		1668116B269578B6003C685C /* Task+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataClass.swift"; sourceTree = "<group>"; };
+		1668116C269578B6003C685C /* Task+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Task+CoreDataProperties.swift"; path = "../Task+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				163F994726932D06009080D6 /* TaskItem */,
 				163F992F26932C16009080D6 /* Alpha_0_2_SelfoldApp.swift */,
 				163F993126932C16009080D6 /* ContentView.swift */,
+				1668116926957221003C685C /* newTaskView.swift */,
 				1621EDE126947712008F5BC4 /* TaskCard.swift */,
 				163F993326932C17009080D6 /* Assets.xcassets */,
 				163F993826932C17009080D6 /* Persistence.swift */,
@@ -88,8 +91,8 @@
 		163F994726932D06009080D6 /* TaskItem */ = {
 			isa = PBXGroup;
 			children = (
-				163F994326932CD1009080D6 /* Task+CoreDataClass.swift */,
-				163F994426932CD1009080D6 /* Task+CoreDataProperties.swift */,
+				1668116B269578B6003C685C /* Task+CoreDataClass.swift */,
+				1668116C269578B6003C685C /* Task+CoreDataProperties.swift */,
 			);
 			path = TaskItem;
 			sourceTree = "<group>";
@@ -170,11 +173,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1621EDE226947712008F5BC4 /* TaskCard.swift in Sources */,
+				1668116D269578B6003C685C /* Task+CoreDataClass.swift in Sources */,
 				163F993C26932C17009080D6 /* Alpha_0_2_Selfold.xcdatamodeld in Sources */,
-				163F994526932CD1009080D6 /* Task+CoreDataClass.swift in Sources */,
 				163F993926932C17009080D6 /* Persistence.swift in Sources */,
+				1668116A26957221003C685C /* newTaskView.swift in Sources */,
 				163F993226932C16009080D6 /* ContentView.swift in Sources */,
-				163F994626932CD1009080D6 /* Task+CoreDataProperties.swift in Sources */,
+				1668116E269578B6003C685C /* Task+CoreDataProperties.swift in Sources */,
 				163F993026932C16009080D6 /* Alpha_0_2_SelfoldApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
