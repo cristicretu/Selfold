@@ -14,16 +14,15 @@ struct TaskCard: View {
     
     var content = ""
     var date = Date()
-//    var points = ""
+    var points = ""
     
     var body: some View {
+            
         
             VisualEffectBlurView(blurStyle: .systemUltraThinMaterial, vibrancyStyle: .fill, content: {
                 Text("\(content)")
-                Text("\(date)")
-//                if points.isEmpty == false {
-//                    Text("\(points)")
-//                }
+//                Text("\(date)")
+                Text("\(points)")
             })
             .frame(width: 150, height: 150)
             .mask(RoundedRectangle(cornerRadius: 25, style: .continuous))

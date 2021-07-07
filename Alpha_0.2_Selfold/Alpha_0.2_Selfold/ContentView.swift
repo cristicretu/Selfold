@@ -24,17 +24,17 @@ struct ContentView: View {
             VStack {
                 HStack {
                     ForEach(TaskItems) { item in
-                        TaskCard(content: item.content!, date: item.date!)
+                        TaskCard(content: item.content!, date: item.date!, points: item.taskPoints!)
                             .contextMenu() {
-                            Button(action: {
-                                self.managedObjectContext.delete(item)
-                                do {
-                                    try self.managedObjectContext.save()
-                                } catch {
-                                    print(error)
-                                }
-                            }, label: Text("hello"))
-                        }
+                                Button(action: {
+                                    self.managedObjectContext.delete(item)
+                                    do {
+                                        try self.managedObjectContext.save()
+                                    } catch {
+                                        print(error)
+                                    }
+                                }, label: Text("hello"))
+                            }
                     }
                     
                 }
@@ -47,6 +47,14 @@ struct ContentView: View {
                         .environment(\.managedObjectContext, self.managedObjectContext)
                 })
             }
+            
+            .toolbar {
+                        ToolbarItem(placement: .bottomBar) {
+                            Button("Press Me") {
+                                print("Pressed")
+                            }
+                        }
+                    }
         }
         .navigationTitle("Home")
     }

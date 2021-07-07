@@ -21,7 +21,7 @@ struct newTaskView: View {
     // Task Details
     @State private var newTaskItem = "Go to the dentist"
     @State private var date = Date()
-//    @State private var points = ""
+    @State private var points = ""
     
     // Remove TextEditor BG in the new sheet
     init() {
@@ -52,13 +52,13 @@ struct newTaskView: View {
             // - - - - - - - Task content
             
             // - - - - - - - Task points
-//            TextField("Number of points", text: $points)
-//                .keyboardType(.numberPad)
+            TextField("Number of points", text: $points)
+                .keyboardType(.numberPad)
             // - - - - - - - Task points
             
             
             // !!!!!!! JUST FOR DEBUGGING, REMOVE IN PRODUCTION
-//            Button(action: {print(points)}, label: Text("click me"))
+            Button(action: {print(points)}, label: Text("click me"))
             
             // - - - - - - - Task date
             Text("Task date")
@@ -76,7 +76,7 @@ struct newTaskView: View {
                  let TaskItem = Task(context: self.managedObjectContext)
                  TaskItem.content = self.newTaskItem
                  TaskItem.date = date
-//                 TaskItem.points = points
+                 TaskItem.taskPoints = points
 
                  do {
                      try self.managedObjectContext.save()
