@@ -16,12 +16,13 @@ struct TaskCard: View {
     var body: some View {
             VisualEffectBlurView(blurStyle: .systemUltraThinMaterial, vibrancyStyle: .fill, content: {
                 Text("\(content)")
-                Text("\(date)")
+//                Text("\(date)")
                 Text("\(points)")
             })
-            .frame(width: 150, height: 150)
+            .frame(width: 150, height: 150).contentShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
+            .clipShape(RoundedRectangle(cornerRadius: 25, style: .continuous))
             .mask(RoundedRectangle(cornerRadius: 25, style: .continuous))
-            .overlay(RoundedRectangle(cornerRadius: 25, style: .continuous).stroke(lineWidth: 0.5).fill(Color.white))
+            .overlay(RoundedRectangle(cornerRadius: 25, style: .continuous).stroke(lineWidth: 0.75).fill(Color.white))
             
     }
 }

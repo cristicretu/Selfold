@@ -25,7 +25,11 @@ struct CardsList: View {
                                 } catch {
                                     print(error)
                                 }
-                            }, label: Text("hello"))
+                            }, label: HStack {
+                                Text("Delete task")
+                                Spacer()
+                                Image(.system("trash"))
+                            })
                         }
                 }
             }

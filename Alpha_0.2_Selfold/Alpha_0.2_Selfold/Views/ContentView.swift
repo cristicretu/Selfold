@@ -22,7 +22,7 @@ struct ContentView: View {
     
     var body: some View {
         ZStack {
-            backgroundLight.ignoresSafeArea()
+            backgroundDark.ignoresSafeArea()
             
             VStack (alignment: .leading) {
                 
@@ -31,47 +31,24 @@ struct ContentView: View {
                     .fontWeight(.bold)
                     .padding(.top)
                 
-                HStack {
-                    Text("What's next for you: ")
-                        .font(.title3)
-                        .fontWeight(.medium)
-                        .padding(.top)
-                    Spacer()
-                    
-                    Button(action: {showingSheet.toggle()}, label: {
-                        VisualEffectBlurView(blurStyle: .systemThinMaterial, vibrancyStyle: .fill, content: {
-                            HStack {
-                                Text("New")
-                                Image(systemName: "plus.circle.fill")
-                            }
-                        })
-                        .frame(width: 80, height: 30).contentShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
-                        .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
-                        .overlay(RoundedRectangle(cornerRadius: 30, style: .continuous).stroke(lineWidth: 0.75).fill(Color.white))
-                        .padding(.top)
-                        .padding(.trailing)
-                    })
-                    .sheet(isPresented: $showingSheet, content: {
-                        newTaskView()
-                            .environment(\.managedObjectContext, self.managedObjectContext)
-                    })
-                }
+                WhatsNextView()
                 
-                CardsList()
             }
             .padding(.leading)
             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
         
             .toolbar {
-                        ToolbarItem(placement: .bottomBar) {
-                            Button("Press Me") {
-                                print("Pressed")
-                            }
-                        }
+                ToolbarItem(placement: .bottomBar) {
+                    Button("Press Me") {
+                        print("Pressed")
                     }
+                }
+            }
         }
             
     }
+    
+    
     
     var backgroundLight: some View {
         ZStack {

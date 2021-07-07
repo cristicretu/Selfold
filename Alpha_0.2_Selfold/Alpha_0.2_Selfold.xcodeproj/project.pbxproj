@@ -19,6 +19,7 @@
 		1668116D269578B6003C685C /* Task+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1668116B269578B6003C685C /* Task+CoreDataClass.swift */; };
 		1668116E269578B6003C685C /* Task+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1668116C269578B6003C685C /* Task+CoreDataProperties.swift */; };
 		166811722695A2D3003C685C /* CardsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166811712695A2D3003C685C /* CardsList.swift */; };
+		166811742695D5E3003C685C /* WhatsNextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166811732695D5E3003C685C /* WhatsNextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		1668116B269578B6003C685C /* Task+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataClass.swift"; sourceTree = "<group>"; };
 		1668116C269578B6003C685C /* Task+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Task+CoreDataProperties.swift"; path = "../Task+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		166811712695A2D3003C685C /* CardsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsList.swift; sourceTree = "<group>"; };
+		166811732695D5E3003C685C /* WhatsNextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsNextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,14 +70,11 @@
 		163F992E26932C16009080D6 /* Alpha_0.2_Selfold */ = {
 			isa = PBXGroup;
 			children = (
+				166811752695D666003C685C /* Views */,
 				163F994726932D06009080D6 /* TaskItem */,
 				163F992F26932C16009080D6 /* Alpha_0_2_SelfoldApp.swift */,
-				163F993126932C16009080D6 /* ContentView.swift */,
-				1668116926957221003C685C /* newTaskView.swift */,
-				1621EDE126947712008F5BC4 /* TaskCard.swift */,
 				163F993326932C17009080D6 /* Assets.xcassets */,
 				163F993826932C17009080D6 /* Persistence.swift */,
-				166811712695A2D3003C685C /* CardsList.swift */,
 				163F993D26932C17009080D6 /* Info.plist */,
 				163F993A26932C17009080D6 /* Alpha_0_2_Selfold.xcdatamodeld */,
 				163F993526932C17009080D6 /* Preview Content */,
@@ -98,6 +97,18 @@
 				1668116C269578B6003C685C /* Task+CoreDataProperties.swift */,
 			);
 			path = TaskItem;
+			sourceTree = "<group>";
+		};
+		166811752695D666003C685C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				166811732695D5E3003C685C /* WhatsNextView.swift */,
+				163F993126932C16009080D6 /* ContentView.swift */,
+				1668116926957221003C685C /* newTaskView.swift */,
+				166811712695A2D3003C685C /* CardsList.swift */,
+				1621EDE126947712008F5BC4 /* TaskCard.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,6 +195,7 @@
 				1668116E269578B6003C685C /* Task+CoreDataProperties.swift in Sources */,
 				163F993026932C16009080D6 /* Alpha_0_2_SelfoldApp.swift in Sources */,
 				166811722695A2D3003C685C /* CardsList.swift in Sources */,
+				166811742695D5E3003C685C /* WhatsNextView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

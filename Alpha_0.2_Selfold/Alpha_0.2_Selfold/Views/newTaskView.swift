@@ -23,6 +23,9 @@ struct newTaskView: View {
     @State private var date = Date()
     @State private var points = ""
     
+    @State private var pointsInt = 10.0
+    @State private var isEditing = false
+    
     // Remove TextEditor BG in the new sheet
     init() {
             UITextView.appearance().backgroundColor = .clear
@@ -52,13 +55,23 @@ struct newTaskView: View {
             // - - - - - - - Task content
             
             // - - - - - - - Task points
-            TextField("Number of points", text: $points)
-                .keyboardType(.numberPad)
+//            HStack {
+//                Image(systemName: "minus")
+//                Slider(value: $pointsInt, in: 0...20, step: 1)
+//                    .onChange(of: self.pointsInt, perform: <#T##(Equatable) -> Void#>)
+//                    .accentColor(Color.green)
+//                Image(systemName: "plus")
+//            }.foregroundColor(Color.green)
+            Slider(value: $pointsInt, in: 1...25, step: 1)
+            Text("\(pointsInt)")
+//            Slider(value: $pointsInt, in: 1...25, step: 1, onEditingChanged: {editing in
+//                isEditing = editing
+//            })
             // - - - - - - - Task points
             
             
             // !!!!!!! JUST FOR DEBUGGING, REMOVE IN PRODUCTION
-            Button(action: {print(points)}, label: Text("click me"))
+            Button(action: {print(pointsInt)}, label: Text("click me"))
             
             // - - - - - - - Task date
             Text("Task date")
@@ -76,8 +89,22 @@ struct newTaskView: View {
                  let TaskItem = Task(context: self.managedObjectContext)
                  TaskItem.content = self.newTaskItem
                  TaskItem.date = date
-                 TaskItem.taskPoints = points
+                
+                // Convert Double to String (f)
+                var str = String(pointsInt)
+                if let dotRange = str.range(of: ".") {
+                  str.removeSubrange(dotRange.lowerBound..<str.endIndex)
+                }
+                if str == "1" {
+                    str = str + " point"
+                }
+                else {
+                    str = str + " points"
+                }
+                TaskItem.taskPoints = str
 
+                
+                
                  do {
                      try self.managedObjectContext.save()
                  } catch {
