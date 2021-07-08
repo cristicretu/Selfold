@@ -46,21 +46,26 @@ extension Task : Identifiable {
     
     static func getDailyTaskItems() -> NSFetchRequest<Task> {
         let fetchRequest : NSFetchRequest<Task> = Task.fetchRequest() as! NSFetchRequest<Task>
-        fetchRequest.predicate = NSPredicate(format: "date >= %@ AND date < %@", Date().addingTimeInterval(-10 * 60) as CVarArg,     Calendar.current.date(byAdding: .day, value: 1, to: createDailyDate(date: Date()))! as CVarArg)
+        let nextDay = Calendar.current.date(byAdding: .day, value: 1, to: createDailyDate(date: Date()))
+        fetchRequest.predicate = NSPredicate(format: "date >= %@ AND date < %@", Date().addingTimeInterval(-10 * 60) as CVarArg,  nextDay! as CVarArg)
         let sortDescriptor = NSSortDescriptor(key: "date", ascending: true)
         fetchRequest.sortDescriptors = [sortDescriptor]
         return fetchRequest
     }
     
-//    static func getDailyTotalPoints() -> Int {
-//        let fetchRequest : NSFetchRequest<Task> = Task.fetchRequest() as! NSFetchRequest<Task>
-//        let newDate = createDailyDate(date: Date())
-//        fetchRequest.predicate = NSPredicate(format: "date >= %@", newDate as CVarArg)
-//
-//        for item in fetchRequest {
-//
-//        }
-//    }
+    static func getDailyTotalPoints() -> Int {
+        let fetchRequest : NSFetchRequest<Task> = Task.fetchRequest() as! NSFetchRequest<Task>
+        let newDate = createDailyDate(date: Date())
+        let nextDay = Calendar.current.date(byAdding: .day, value: 1, to: createDailyDate(date: Date()))
+        fetchRequest.predicate = NSPredicate(format: "date >= %@ AND date < %@", newDate as CVarArg, nextDay! as CVarArg)
+
+        let records = try! context.fetch(fetchRequest) as! [NSManagedObject]
+
+        let monthlyIncome = records.reduce(0) { $0 + ($1.value(forKey: "value") as? Int64 ?? 0) }
+        
+        var totalPoints = 0
+        return totalPoints
+    }
 
 //    static func getCompletedPoints() -> NSFetchRequest<Task> {
 //
