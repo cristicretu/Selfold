@@ -22,9 +22,9 @@ struct newTaskView: View {
     @State private var newTaskItem = "Go to the dentist"
     @State private var date = Date()
     @State private var points = ""
+    @State private var isCompleted = false
     
     @State private var pointsInt = 10.0
-    @State private var isEditing = false
     
     // Remove TextEditor BG in the new sheet
     init() {
@@ -90,7 +90,7 @@ struct newTaskView: View {
                  TaskItem.content = self.newTaskItem
                  TaskItem.date = date
                 
-                // Convert Double to String (f)
+                // Convert Double to String
                 var str = String(pointsInt)
                 if let dotRange = str.range(of: ".") {
                   str.removeSubrange(dotRange.lowerBound..<str.endIndex)
@@ -102,9 +102,8 @@ struct newTaskView: View {
                     str = str + " points"
                 }
                 TaskItem.taskPoints = str
+                TaskItem.isCompleted = false
 
-                
-                
                  do {
                      try self.managedObjectContext.save()
                  } catch {

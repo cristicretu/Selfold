@@ -19,17 +19,46 @@ extension Task {
     @NSManaged public var content: String?
     @NSManaged public var date: Date?
     @NSManaged public var taskPoints: String?
+    @NSManaged public var isCompleted: Bool
     
-    // don't use but without it the app breaks :)
     @NSManaged public var points: Int64
 
 }
 
 extension Task : Identifiable {
+    
     static func getAllTaskItems() -> NSFetchRequest<Task> {
         let request : NSFetchRequest<Task> = Task.fetchRequest() as! NSFetchRequest<Task>
         let sortDescriptor = NSSortDescriptor(key: "date", ascending: true)
         request.sortDescriptors = [sortDescriptor]
         return request
     }
+    
+    static func getDailyTaskItems() -> NSFetchRequest<Task> {
+        let fetchRequest : NSFetchRequest<Task> = Task.fetchRequest() as! NSFetchRequest<Task>
+        fetchRequest.predicate = NSPredicate(format: "date >= %@", Date() as CVarArg)
+        let sortDescriptor = NSSortDescriptor(key: "date", ascending: true)
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        return fetchRequest
+    }
+    
+//    static func getDailyTaskItems() -> NSFetchRequest<Task> {
+//        let request : NSFetchRequest<Task> = Task.fetchRequest() as! NSFetchRequest<Task>
+//        let filter = ???
+//        let predicate = NSPredicate(format = "", filter)
+//        request.predicate = predicate
+//        let sortDescriptor = NSSortDescriptor(key: "date", ascending: true)
+//        request.sortDescriptors = [sortDescriptor]
+//        return request
+//    }
+    
+//    static func getAllPoints() -> Int {
+//        let request : NSFetchRequest<Task> = Task.fetchRequest() as! NSFetchRequest<Task>
+//        print(request)
+//        return 5
+//    }
+
+//    static func getCompletedPoints() -> NSFetchRequest<Task> {
+//
+//    }
 }

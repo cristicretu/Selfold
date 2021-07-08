@@ -12,12 +12,15 @@ struct TaskCard: View {
     var content = ""
     var date = Date()
     var points = ""
+
+    var comp = false
     
     var body: some View {
             VisualEffectBlurView(blurStyle: .systemUltraThinMaterial, vibrancyStyle: .fill, content: {
                 Text("\(content)")
 //                Text("\(date)")
                 Text("\(points)")
+                Text("\(String(comp))")
             })
             .frame(width: 150, height: 150).contentShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
             .clipShape(RoundedRectangle(cornerRadius: 25, style: .continuous))

@@ -20,6 +20,7 @@
 		1668116E269578B6003C685C /* Task+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1668116C269578B6003C685C /* Task+CoreDataProperties.swift */; };
 		166811722695A2D3003C685C /* CardsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166811712695A2D3003C685C /* CardsList.swift */; };
 		166811742695D5E3003C685C /* WhatsNextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166811732695D5E3003C685C /* WhatsNextView.swift */; };
+		16AF6DB32696CD12000B153D /* PointsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF6DB22696CD12000B153D /* PointsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		1668116C269578B6003C685C /* Task+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Task+CoreDataProperties.swift"; path = "../Task+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		166811712695A2D3003C685C /* CardsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsList.swift; sourceTree = "<group>"; };
 		166811732695D5E3003C685C /* WhatsNextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsNextView.swift; sourceTree = "<group>"; };
+		16AF6DB22696CD12000B153D /* PointsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				1668116926957221003C685C /* newTaskView.swift */,
 				166811712695A2D3003C685C /* CardsList.swift */,
 				1621EDE126947712008F5BC4 /* TaskCard.swift */,
+				16AF6DB22696CD12000B153D /* PointsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 				1621EDE226947712008F5BC4 /* TaskCard.swift in Sources */,
 				1668116D269578B6003C685C /* Task+CoreDataClass.swift in Sources */,
 				163F993C26932C17009080D6 /* Alpha_0_2_Selfold.xcdatamodeld in Sources */,
+				16AF6DB32696CD12000B153D /* PointsView.swift in Sources */,
 				163F993926932C17009080D6 /* Persistence.swift in Sources */,
 				1668116A26957221003C685C /* newTaskView.swift in Sources */,
 				163F993226932C16009080D6 /* ContentView.swift in Sources */,
