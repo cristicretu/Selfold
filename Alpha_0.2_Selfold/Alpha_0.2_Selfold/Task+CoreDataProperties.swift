@@ -44,7 +44,7 @@ extension Task : Identifiable {
         return newDate
     }
     
-    static func getDailyTaskItems() -> NSFetchRequest<Task> {
+    static func getNextTaskItems() -> NSFetchRequest<Task> {
         let fetchRequest : NSFetchRequest<Task> = Task.fetchRequest() as! NSFetchRequest<Task>
         let nextDay = Calendar.current.date(byAdding: .day, value: 1, to: createDailyDate(date: Date()))
         fetchRequest.predicate = NSPredicate(format: "date >= %@ AND date < %@", Date().addingTimeInterval(-10 * 60) as CVarArg,  nextDay! as CVarArg)
@@ -53,19 +53,31 @@ extension Task : Identifiable {
         return fetchRequest
     }
     
-    static func getDailyTotalPoints() -> Int {
+    static func getDailyTaskItems() -> NSFetchRequest<Task> {
         let fetchRequest : NSFetchRequest<Task> = Task.fetchRequest() as! NSFetchRequest<Task>
         let newDate = createDailyDate(date: Date())
         let nextDay = Calendar.current.date(byAdding: .day, value: 1, to: createDailyDate(date: Date()))
         fetchRequest.predicate = NSPredicate(format: "date >= %@ AND date < %@", newDate as CVarArg, nextDay! as CVarArg)
-
-        let records = try! context.fetch(fetchRequest) as! [NSManagedObject]
-
-        let monthlyIncome = records.reduce(0) { $0 + ($1.value(forKey: "value") as? Int64 ?? 0) }
-        
-        var totalPoints = 0
-        return totalPoints
+        let sortDescriptor = NSSortDescriptor(key: "date", ascending: true)
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        return fetchRequest
     }
+    
+//    static func getDailyPoints() -> Int {
+//        let keypathExp1 = NSExpression(forKeyPath: "taskPoints")
+//        let expression = NSExpression(forFunction: "sum:", arguments: [keypathExp1])
+//        let sumDesc = NSExpressionDescription()
+//        sumDesc.expression = expression
+//        sumDesc.name = "sum"
+//        sumDesc.expressionResultType = .integer64AttributeType
+//                        
+//        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "taskPoints")
+//        request.returnsObjectsAsFaults = false
+//        request.propertiesToFetch = [sumDesc]
+//        request.resultType = .dictionaryResultType
+//        
+//        return request
+//    }
 
 //    static func getCompletedPoints() -> NSFetchRequest<Task> {
 //

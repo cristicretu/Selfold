@@ -11,13 +11,13 @@ struct CardsList: View {
     // Core Data
     @Environment (\.managedObjectContext) var managedObjectContext
 //    @FetchRequest(fetchRequest: Task.getAllTaskItems()) var TaskItems: FetchedResults<Task>
-    @FetchRequest(fetchRequest: Task.getDailyTaskItems()) var TaskItems: FetchedResults<Task>
+    @FetchRequest(fetchRequest: Task.getNextTaskItems()) var TaskItems: FetchedResults<Task>
     
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(alignment: .top, spacing: 16) {
                 ForEach(TaskItems) { item in
-                    TaskCard(content: item.content!, date: item.date!, points: item.taskPoints!, comp: item.isCompleted)
+                    TaskCard(content: item.content!, date: item.date!, points: Int(item.points), comp: item.isCompleted)
                         .contextMenu() {
                             Button(action: {
                                 self.managedObjectContext.delete(item)

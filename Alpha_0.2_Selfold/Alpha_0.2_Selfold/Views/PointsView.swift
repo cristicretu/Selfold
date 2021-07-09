@@ -10,16 +10,13 @@ import SwiftUI
 struct PointsView: View {
     // Core Data
     @Environment (\.managedObjectContext) var managedObjectContext
-    @FetchRequest(fetchRequest: Task.getAllTaskItems()) var TaskItems: FetchedResults<Task>
+    @FetchRequest(fetchRequest: Task.getDailyTaskItems()) var TaskItems: FetchedResults<Task>
     
     // number of points
     var totalPoints = 0
     var currentPoints = 0
     
     @State private var isCompleted = false
-    @State private var pointsInt = 10.0
-    
-    
     
     var body: some View {
         HStack {

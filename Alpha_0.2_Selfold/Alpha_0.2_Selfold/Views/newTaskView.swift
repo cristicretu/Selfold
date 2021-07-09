@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftUIX
 
 struct newTaskView: View {
     // Dismiss the view
@@ -21,7 +22,6 @@ struct newTaskView: View {
     // Task Details
     @State private var newTaskItem = "Go to the dentist"
     @State private var date = Date()
-    @State private var points = ""
     @State private var isCompleted = false
     
     @State private var pointsInt = 10.0
@@ -55,23 +55,14 @@ struct newTaskView: View {
             // - - - - - - - Task content
             
             // - - - - - - - Task points
-//            HStack {
-//                Image(systemName: "minus")
-//                Slider(value: $pointsInt, in: 0...20, step: 1)
-//                    .onChange(of: self.pointsInt, perform: <#T##(Equatable) -> Void#>)
-//                    .accentColor(Color.green)
-//                Image(systemName: "plus")
-//            }.foregroundColor(Color.green)
-            Slider(value: $pointsInt, in: 1...25, step: 1)
-            Text("\(pointsInt)")
-//            Slider(value: $pointsInt, in: 1...25, step: 1, onEditingChanged: {editing in
-//                isEditing = editing
-//            })
+            Text("Task points")
+            HStack {
+                Text("1")
+                Slider(value: $pointsInt, in: 1...25, step: 1)
+                Text("25")
+            }
+            Text(Int(pointsInt) == 1 ? "1 point" : "\(Int(pointsInt)) points")
             // - - - - - - - Task points
-            
-            
-            // !!!!!!! JUST FOR DEBUGGING, REMOVE IN PRODUCTION
-            Button(action: {print(pointsInt)}, label: Text("click me"))
             
             // - - - - - - - Task date
             Text("Task date")
@@ -86,39 +77,35 @@ struct newTaskView: View {
             
             // - - - - - - - Task save
             Button(action: {
-                 let TaskItem = Task(context: self.managedObjectContext)
-                 TaskItem.content = self.newTaskItem
-                 TaskItem.date = date
+                let TaskItem = Task(context: self.managedObjectContext)
                 
-                // Convert Double to String
-                var str = String(pointsInt)
-                if let dotRange = str.range(of: ".") {
-                  str.removeSubrange(dotRange.lowerBound..<str.endIndex)
-                }
-                if str == "1" {
-                    str = str + " point"
-                }
-                else {
-                    str = str + " points"
-                }
-                TaskItem.taskPoints = str
+                TaskItem.content = self.newTaskItem
+                TaskItem.date = date
+                TaskItem.points = Int64(pointsInt)
                 TaskItem.isCompleted = false
 
-                 do {
-                     try self.managedObjectContext.save()
-                 } catch {
-                     print(error)
-                 }
+                do {
+                    try self.managedObjectContext.save()
+                } catch {
+                    print(error)
+                }
 
-                 self.newTaskItem = ""
-                 presentationMode.wrappedValue.dismiss()
+                self.newTaskItem = ""
+                presentationMode.wrappedValue.dismiss()
 
-             })
-             {
-                 Image(systemName: "plus.circle.fill")
-                     .foregroundColor(.green)
-                     .imageScale(.large)
-             }
+                }, label: {
+                VisualEffectBlurView(blurStyle: .systemThinMaterial, vibrancyStyle: .fill, content: {
+                    HStack {
+                        Text("Save")
+                        Image(systemName: "plus.circle.fill")
+                    }
+                })
+                .frame(width: 80, height: 30).contentShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
+                .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
+                .overlay(RoundedRectangle(cornerRadius: 30, style: .continuous).stroke(lineWidth: 0.75).fill(Color.white))
+                .padding(.top)
+                .padding(.trailing)
+            })
             // - - - - - - - Task save
         }
         .padding()    }
