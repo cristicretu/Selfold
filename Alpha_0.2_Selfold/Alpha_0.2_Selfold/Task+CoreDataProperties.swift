@@ -63,21 +63,43 @@ extension Task : Identifiable {
         return fetchRequest
     }
     
-//    static func getDailyPoints() -> Int {
+    static func getDailyPoints() -> Int {
 //        let keypathExp1 = NSExpression(forKeyPath: "taskPoints")
 //        let expression = NSExpression(forFunction: "sum:", arguments: [keypathExp1])
 //        let sumDesc = NSExpressionDescription()
 //        sumDesc.expression = expression
 //        sumDesc.name = "sum"
 //        sumDesc.expressionResultType = .integer64AttributeType
-//                        
+//
 //        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "taskPoints")
 //        request.returnsObjectsAsFaults = false
 //        request.propertiesToFetch = [sumDesc]
 //        request.resultType = .dictionaryResultType
-//        
+//
 //        return request
-//    }
+        
+        
+        let fetch : NSFetchRequest<Task> = Task.fetchRequest() as! NSFetchRequest<Task>
+
+        let newDate = createDailyDate(date: Date())
+        let nextDay = Calendar.current.date(byAdding: .day, value: 1, to: newDate)
+        
+        fetch.predicate = NSPredicate(format: "date >= %@ AND date < %@", newDate as CVarArg, nextDay! as CVarArg)
+        fetch.resultType = .dictionaryResultType
+        
+        let sumExpression = NSExpression(format: "sum:(points)")
+        let sumED = NSExpressionDescription()
+        sumED.expression = sumExpression
+        print(sumED)
+        return 5
+//        sumED.name = "sumOfPoints"
+//        sumED.expressionResultType = .DoubleAttributeType
+//        fetch.propertiesToFetch = ["Account_name", sumED]
+//        fetch.propertiesToGroupBy = ["Account_name"]
+//        let sort = NSSortDescriptor(key: "Account_name", ascending: false)
+//        fetch.sortDescriptors = [sort]
+//        let results = managedObjectContext?.executeFetchRequest(fetch, error: nil) as NSArray?
+    }
 
 //    static func getCompletedPoints() -> NSFetchRequest<Task> {
 //

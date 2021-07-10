@@ -110,9 +110,3 @@ struct newTaskView: View {
         }
         .padding()    }
 }
-
-struct newTaskView_Previews: PreviewProvider {
-    static var previews: some View {
-        newTaskView()
-    }
-}

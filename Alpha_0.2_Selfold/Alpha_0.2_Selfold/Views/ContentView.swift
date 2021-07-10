@@ -41,8 +41,8 @@ struct ContentView: View {
         
             .toolbar {
                 ToolbarItem(placement: .bottomBar) {
-                    Button("Press Me") {
-                        print("Pressed")
+                    NavigationLink(destination: PointsView()) {
+                        Text("GO MESSI")
                     }
                 }
             }

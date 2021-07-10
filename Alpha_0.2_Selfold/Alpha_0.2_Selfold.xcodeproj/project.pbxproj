@@ -38,6 +38,7 @@
 		1668116C269578B6003C685C /* Task+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Task+CoreDataProperties.swift"; path = "../Task+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		166811712695A2D3003C685C /* CardsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsList.swift; sourceTree = "<group>"; };
 		166811732695D5E3003C685C /* WhatsNextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsNextView.swift; sourceTree = "<group>"; };
+		16954C762698759C00E33787 /* Alpha_0.2_Selfold.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Alpha_0.2_Selfold.entitlements; sourceTree = "<group>"; };
 		16AF6DB22696CD12000B153D /* PointsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,6 +73,7 @@
 		163F992E26932C16009080D6 /* Alpha_0.2_Selfold */ = {
 			isa = PBXGroup;
 			children = (
+				16954C762698759C00E33787 /* Alpha_0.2_Selfold.entitlements */,
 				166811752695D666003C685C /* Views */,
 				163F994726932D06009080D6 /* TaskItem */,
 				163F992F26932C16009080D6 /* Alpha_0_2_SelfoldApp.swift */,
@@ -327,6 +329,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Alpha_0.2_Selfold/Alpha_0.2_Selfold.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Alpha_0.2_Selfold/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
@@ -348,6 +351,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Alpha_0.2_Selfold/Alpha_0.2_Selfold.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Alpha_0.2_Selfold/Preview Content\"";
 				ENABLE_PREVIEWS = YES;

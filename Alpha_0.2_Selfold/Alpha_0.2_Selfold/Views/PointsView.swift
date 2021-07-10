@@ -10,11 +10,12 @@ import SwiftUI
 struct PointsView: View {
     // Core Data
     @Environment (\.managedObjectContext) var managedObjectContext
-    @FetchRequest(fetchRequest: Task.getDailyTaskItems()) var TaskItems: FetchedResults<Task>
+//    @FetchRequest(fetchRequest: Task.getDailyTaskItems()) var TaskItems: FetchedResults<Task>
     
+    var test = Task.getDailyPoints()
     // number of points
-    var totalPoints = 0
-    var currentPoints = 0
+    let totalPoints = 0
+    let currentPoints = 0
     
     @State private var isCompleted = false
     
@@ -29,7 +30,8 @@ struct PointsView: View {
             
             Spacer()
             
-            Text("14 / 45 POINTS")
+//            Text("14 / 45 POINTS")
+            Text("\(test) / \(totalPoints) POINTS")
         }
         .padding(.trailing)
         .padding(.top)
