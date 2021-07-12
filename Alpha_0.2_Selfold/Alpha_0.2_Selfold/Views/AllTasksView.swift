@@ -15,27 +15,33 @@ struct AllTasksView: View {
     private var gridItemLayout = [GridItem(.flexible()), GridItem(.flexible())]
     
     var body: some View {
-        ScrollView {
-            LazyVGrid(columns: gridItemLayout, spacing: 20) {
-                ForEach(TaskItems) { item in
-                    TaskCard(content: item.content!, date: item.date!, points: Int(item.points), comp: item.isCompleted)
-                        .contextMenu() {
-                            Button(action: {
-                                self.managedObjectContext.delete(item)
-                                do {
-                                    try self.managedObjectContext.save()
-                                } catch {
-                                    print(error)
-                                }
-                            }, label: HStack {
-                                Text("Delete task")
-                                Spacer()
-                                Image(.system("trash"))
-                            })
-                        }
+        if TaskItems.isEmpty == false {
+            ScrollView {
+                LazyVGrid(columns: gridItemLayout, spacing: 16) {
+                    ForEach(TaskItems) { item in
+                        TaskCard(content: item.content!, date: item.date!, points: Int(item.points), comp: item.isCompleted)
+                            .contextMenu() {
+                                Button(action: {
+                                    self.managedObjectContext.delete(item)
+                                    do {
+                                        try self.managedObjectContext.save()
+                                    } catch {
+                                        print(error)
+                                    }
+                                }, label: HStack {
+                                    Text("Delete task")
+                                    Spacer()
+                                    Image(.system("trash"))
+                                })
+                            }
+                    }
                 }
             }
         }
+        else {
+            Text("You don't have any tasks, add some using the following button")
+        }
+        
     }
 }
 

@@ -38,16 +38,25 @@ struct ContentView: View {
                 .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
                 
                 
-
+                NavigationLink(destination: EmptyView()) {
+                    EmptyView()
+                }
             }
             .navigationTitle("Today")
             .toolbar {
                 ToolbarItem(placement: .bottomBar) {
                     HStack {
-                        NavigationLink("All tasks", destination: AllTasksView())
+                        NavigationLink(destination: EmptyView()) {
+                            EmptyView()
+                        }
+//                        NavigationLink({Image(systemName: "tray.2.fill")}, destination: AllTasksView())
+//                        NavigationLink(destination: AllTasksView(), label: {
+//                            Image(systemName: "tray.2.fill")
+//                        })
                         NavigationLink("Today", destination: AllTasksView())
                         NavigationLink("Settings", destination: AllTasksView())
                         NavigationLink("Remainders", destination: AllTasksView())
+                       
                     }
                 }
             }
