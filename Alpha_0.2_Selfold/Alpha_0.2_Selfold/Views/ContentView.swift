@@ -29,33 +29,38 @@ struct ContentView: View {
                 else {
                     backgroundLight.ignoresSafeArea()
                 }
-                
                 VStack (alignment: .leading) {
                     WhatsNextView()
                     PointsView()
                 }
                 .padding(.leading)
                 .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
-                
-                
-                NavigationLink(destination: EmptyView()) {
-                    EmptyView()
-                }
             }
             .navigationTitle("Today")
             .toolbar {
                 ToolbarItem(placement: .bottomBar) {
                     HStack {
-                        NavigationLink(destination: EmptyView()) {
-                            EmptyView()
-                        }
-//                        NavigationLink({Image(systemName: "tray.2.fill")}, destination: AllTasksView())
-//                        NavigationLink(destination: AllTasksView(), label: {
-//                            Image(systemName: "tray.2.fill")
-//                        })
-                        NavigationLink("Today", destination: AllTasksView())
-                        NavigationLink("Settings", destination: AllTasksView())
-                        NavigationLink("Remainders", destination: AllTasksView())
+                        // All tasks
+                        NavigationLink(destination: AllTasksView(), label: {
+                            Image(systemName: "tray.2.fill")
+                                .padding()
+                                
+                        })
+                        // Today
+                        NavigationLink(destination: AllTasksView(), label: {
+                            Image(systemName: "smallcircle.fill.circle")
+                                .padding()
+                        })
+                        // Remainders
+                        NavigationLink(destination: AllTasksView(), label: {
+                            Image(systemName: "clock.fill")
+                                .padding()
+                        })
+                        // Settings
+                        NavigationLink(destination: AllTasksView(), label: {
+                            Image(systemName: "gearshape.fill")
+                                .padding()
+                        })
                        
                     }
                 }
@@ -63,8 +68,6 @@ struct ContentView: View {
         }
         
     }
-    
-    
     
     var backgroundLight: some View {
         ZStack {
@@ -93,6 +96,7 @@ struct ContentView: View {
         }
     }
 }
+
 //struct ContentView_Previews: PreviewProvider {
 //    static var previews: some View {
 //        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
