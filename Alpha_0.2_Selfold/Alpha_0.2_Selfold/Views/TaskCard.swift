@@ -16,7 +16,7 @@ struct TaskCard: View {
     var comp = false
     
     var body: some View {
-            VisualEffectBlurView(blurStyle: .systemUltraThinMaterial, vibrancyStyle: .fill, content: {
+            VisualEffectBlurView(blurStyle: .systemThinMaterial, vibrancyStyle: .fill, content: {
                 Text("\(content)")
 //                Text("\(date)")
                 Text(points == 1 ? "1 point" : "\(points) points")

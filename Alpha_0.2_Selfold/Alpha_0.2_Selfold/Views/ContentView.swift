@@ -20,34 +20,39 @@ struct ContentView: View {
     // Add new task sheet
     @State private var showingSheet = false
     
-    var body: some View {
-        ZStack {
-            backgroundDark.ignoresSafeArea()
-            
-            VStack (alignment: .leading) {
+    var body: some View{
+        NavigationView {
+            ZStack {
+                if colorScheme == .dark {
+                    backgroundDark.ignoresSafeArea()
+                }
+                else {
+                    backgroundLight.ignoresSafeArea()
+                }
                 
-                Text("Home")
-                    .font(.title)
-                    .fontWeight(.bold)
-                    .padding(.top)
+                VStack (alignment: .leading) {
+                    WhatsNextView()
+                    PointsView()
+                }
+                .padding(.leading)
+                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
                 
-                WhatsNextView()
                 
-                PointsView()
-                
+
             }
-            .padding(.leading)
-            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
-        
+            .navigationTitle("Today")
             .toolbar {
                 ToolbarItem(placement: .bottomBar) {
-                    NavigationLink(destination: PointsView()) {
-                        Text("GO MESSI")
+                    HStack {
+                        NavigationLink("All tasks", destination: AllTasksView())
+                        NavigationLink("Today", destination: AllTasksView())
+                        NavigationLink("Settings", destination: AllTasksView())
+                        NavigationLink("Remainders", destination: AllTasksView())
                     }
                 }
             }
         }
-            
+        
     }
     
     
@@ -79,7 +84,6 @@ struct ContentView: View {
         }
     }
 }
-
 //struct ContentView_Previews: PreviewProvider {
 //    static var previews: some View {
 //        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)

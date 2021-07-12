@@ -21,6 +21,8 @@
 		166811722695A2D3003C685C /* CardsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166811712695A2D3003C685C /* CardsList.swift */; };
 		166811742695D5E3003C685C /* WhatsNextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166811732695D5E3003C685C /* WhatsNextView.swift */; };
 		16AF6DB32696CD12000B153D /* PointsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF6DB22696CD12000B153D /* PointsView.swift */; };
+		16F96761269C2BBF00BBB084 /* AllTasksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F96760269C2BBF00BBB084 /* AllTasksView.swift */; };
+		16F96763269C2FC600BBB084 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16F96762269C2FC600BBB084 /* Colors.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		166811732695D5E3003C685C /* WhatsNextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsNextView.swift; sourceTree = "<group>"; };
 		16954C762698759C00E33787 /* Alpha_0.2_Selfold.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Alpha_0.2_Selfold.entitlements; sourceTree = "<group>"; };
 		16AF6DB22696CD12000B153D /* PointsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsView.swift; sourceTree = "<group>"; };
+		16F96760269C2BBF00BBB084 /* AllTasksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTasksView.swift; sourceTree = "<group>"; };
+		16F96762269C2FC600BBB084 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +82,7 @@
 				163F994726932D06009080D6 /* TaskItem */,
 				163F992F26932C16009080D6 /* Alpha_0_2_SelfoldApp.swift */,
 				163F993326932C17009080D6 /* Assets.xcassets */,
+				16F96762269C2FC600BBB084 /* Colors.xcassets */,
 				163F993826932C17009080D6 /* Persistence.swift */,
 				163F993D26932C17009080D6 /* Info.plist */,
 				163F993A26932C17009080D6 /* Alpha_0_2_Selfold.xcdatamodeld */,
@@ -106,6 +111,7 @@
 		166811752695D666003C685C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				16F96760269C2BBF00BBB084 /* AllTasksView.swift */,
 				166811732695D5E3003C685C /* WhatsNextView.swift */,
 				163F993126932C16009080D6 /* ContentView.swift */,
 				1668116926957221003C685C /* newTaskView.swift */,
@@ -179,6 +185,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16F96763269C2FC600BBB084 /* Colors.xcassets in Resources */,
 				163F993726932C17009080D6 /* Preview Assets.xcassets in Resources */,
 				163F993426932C17009080D6 /* Assets.xcassets in Resources */,
 			);
@@ -194,6 +201,7 @@
 				1621EDE226947712008F5BC4 /* TaskCard.swift in Sources */,
 				1668116D269578B6003C685C /* Task+CoreDataClass.swift in Sources */,
 				163F993C26932C17009080D6 /* Alpha_0_2_Selfold.xcdatamodeld in Sources */,
+				16F96761269C2BBF00BBB084 /* AllTasksView.swift in Sources */,
 				16AF6DB32696CD12000B153D /* PointsView.swift in Sources */,
 				163F993926932C17009080D6 /* Persistence.swift in Sources */,
 				1668116A26957221003C685C /* newTaskView.swift in Sources */,
